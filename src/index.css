@@ -1,4 +1,34 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Root */
+h1{
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+  font-size: 48px;
+}
+h2{
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+  font-size: 35px;
+}
+h3{
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+  font-size: 20px;
+}
+p{
+
+  color: white;
+  font-size: 16px;
+}
+html{
+  overflow-x: hidden;
+}
 body {
+  overflow-x: hidden;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +40,97 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+/* ===============CUSTOM CSS================= */
+
+/* Animations */
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.jumping-image {
+  display: inline-block; 
+  animation: jump 2s ease-in-out infinite;
+}
+/* =============HERO AND NAV SECTION ================== */
+.bg-carousel-bg {
+  background-image: url('assets/banner.webp');
+}
+
+.black-bg{
+  background-color: rgba(0, 0, 0, 0.616);
+}
+
+.main-cta {
+  background-image: linear-gradient(180deg, #AD8749, #DCBB75);
+  border-radius: 15px;
+  padding: 10px 25px;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.main-cta:hover {
+  transform: scale(1.1);
+}
+
+/* ==============LANDING PAGE BG=============== */
+.black-green{
+  background-image: linear-gradient(97deg, #283606, #0F1500);
+}
+.get-ticket-container{
+  background: rgb(255 255 255 / 10%);
+      backdrop-filter: blur(10px);
+      border-radius: 20px; 
+}
+
+
+/* =======IMAGE MARQUEE ============= */
+.marquee-container {
+  width: 100%;
+  position: relative; 
+  overflow: hidden; 
+  padding: 10px 0;
+  z-index: 999;
+}
+
+.marquee-content {
+  display: flex;
+  align-items: center;
+  gap: 20px; 
+}
+
+
+
+.animate-marquee {
+  display: flex;
+  animation: marquee 20s linear infinite;
+}
+.marquee-text{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 25px;
+  text-align: center;
+  
+}
+
+/* tags */
+
+.tags{
+  background-image: linear-gradient(180deg, #AD8749, #DCBB75);
+  font-size: 12px;
+  padding: 4px 16px;
+  border-radius: 20px;
 }
